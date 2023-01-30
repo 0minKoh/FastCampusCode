@@ -1,0 +1,174 @@
+// custom variables
+$primary: #036635;
+$secondary: #362415;
+$info: #1e3932;
+
+// import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+.fs-7 {
+  font-size: 15px;
+}
+
+ul, li {
+  list-style: none;
+}
+
+// header
+.pc-header {
+  display: block;
+}
+
+.mobile-header {
+  display: none;
+}
+
+@media screen and (max-width: 993px) {
+  .pc-header {
+    display: none;
+  }
+
+  .mobile-header {
+    display: block;
+    .logo img {
+      width: 50px;
+    }
+  }
+}
+
+.menu-listener:hover {
+  color: $primary;
+  background-color: $dark;
+}
+
+// main
+main {
+  margin-top: 112.58px;
+}
+
+@media screen and (max-width: 993px) {
+  main {
+    margin-top: 66px;
+  }
+}
+
+// banner
+@media screen and (min-width: 993px) {
+  .banner .banner-container {
+    position: relative;
+    min-height: 580px;
+    .title {
+      height: 580px;
+      img {
+        width: 300px;
+      }
+    }
+    .imgs {
+      position: absolute;
+      left: 35%;
+      top: 100px;
+      .img-item {
+        position: absolute;
+        width: 280px;
+        .img-pc {
+          display: inline;
+        }
+        .img-mobile {
+          display: none;
+        }
+      }
+      .img1 {
+        left: 0px;
+      }
+      .img2 {
+        top: 120px;
+        left: 200px;
+      }
+      .img3 {
+        top: 80px;
+        left: 400px;
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 993px) {
+  .banner .banner-container {
+    height: fit-content;
+    .container {
+      .title {
+        justify-content: center;
+        img {
+          margin-top: 100px;
+        }
+      }
+      .imgs {
+        position: relative;
+        text-align: center;
+        .img-item {
+          .img-pc {
+            display: none;
+          }
+          .img-mobile {
+            display: block;
+            width: 60%;
+            margin: 40px auto;
+            position: relative;
+          }
+        }
+        .img3 {
+          padding-bottom: 150px;
+        }
+      }
+    }
+  }
+}
+
+
+//fixed-banner
+@media screen and (max-width: 993px) {
+  .fixed-banner {
+    .bundle-picture {
+      width: 100%;
+    }
+    img {
+      max-width: 100%;
+    }
+  } 
+}
+
+//store
+@media screen and (min-width: 993px) {
+  .store {
+    height: 400px;
+    .imgs img {
+      position: absolute;
+    }
+    .img2 {
+      left: 350px;
+      top: 150px;
+    }
+    .img3 {
+      right: 0px;
+      bottom: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .store {
+    height: fit-content;
+    img {
+      max-width: 100%;
+    }
+    .imgs {
+      .img1 {
+        display: block;
+        margin: 0 auto;
+      }
+      .img2, .img3 {
+        display: none;
+      }
+    }
+  }
+}
